@@ -1,0 +1,39 @@
+[
+  {
+    "label": "wireless-high-demand",
+    "marketplace_id": "ATVPDKIKX0DER",
+    "filters": {
+      "search_volume_t90_min": 5000,
+      "minimum_price": 15,
+      "maximum_price": 80,
+      "sort_field": "searchVolumeT90",
+      "sort_order": "desc",
+      "size": 10
+    },
+    "opportunity": {
+      "min_search_volume_t90": 5000,
+      "max_brand_count": 300,
+      "min_price": 15,
+      "max_price": 80
+    }
+  },
+  {
+    "label": "home-low-competition",
+    "marketplace_id": "ATVPDKIKX0DER",
+    "filters": {
+      "search_volume_t90_min": 2000,
+      "minimum_price": 20,
+      "maximum_price": 120,
+      "brand_count_max": 150,
+      "sort_field": "searchVolumeT90",
+      "sort_order": "desc",
+      "size": 10
+    },
+    "opportunity": {
+      "min_search_volume_t90": 2000,
+      "max_brand_count": 150,
+      "min_price": 20,
+      "max_price": 120
+    }
+  }
+]

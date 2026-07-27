@@ -1,0 +1,37 @@
+name: Daily niche scan
+
+on:
+  schedule:
+    - cron: "30 1 * * *" # 01:30 UTC every day
+  workflow_dispatch: # allow manual runs from the Actions tab
+
+permissions:
+  contents: write # let the bot commit data/reports back to this repo
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scan niches and build report
+        env:
+          PANGOLIN_TOKEN: ${{ secrets.PANGOLIN_TOKEN }}
+        run: |
+          python niche_finder.py run
+          python niche_finder.py report
+
+      - name: Commit results
+        run: |
+          git config user.name "niche-bot"
+          git config user.email "niche-bot@users.noreply.github.com"
+          git add data/ reports/
+          git commit -m "chore: daily niche scan $(date -u +%F)" || echo "no changes"
+          git push

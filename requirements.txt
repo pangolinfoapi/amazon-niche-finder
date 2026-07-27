@@ -1,0 +1,2 @@
+# No third-party dependencies — uses only the Python 3.10+ standard library.
+# Kept for compatibility with CI that runs `pip install -r requirements.txt`.
