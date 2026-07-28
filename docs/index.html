@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blue-Ocean Amazon Niche Finder — free, open-source, powered by Pangolinfo</title>
+<meta name="description" content="Discover low-competition, high-demand Amazon niches with Pangolinfo's filter_niches data. A blue-ocean score ranks every opportunity. Free and open-source." />
+<style>
+  :root{--bg:#fff;--fg:#1f2933;--muted:#52606d;--line:#e4e7eb;--brand:#ff9900;--brand2:#232f3e;--accent:#1463ff;--card:#f8fafc}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:var(--bg);line-height:1.65}
+  a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:920px;margin:0 auto;padding:0 20px}
+  header.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line)}
+  .logo{font-weight:800;font-size:18px;color:var(--brand2)}.logo span{color:var(--brand)}
+  nav a{margin-left:16px;color:var(--muted);font-weight:600;font-size:13.5px}
+  .hero{padding:54px 0 30px;text-align:center;background:linear-gradient(180deg,#fff7ec,#fff)}
+  .hero h1{font-size:34px;margin:0 0 12px;color:var(--brand2)}
+  .hero p{font-size:17px;color:var(--muted);max-width:620px;margin:0 auto 20px}
+  .cta{display:inline-block;background:var(--brand);color:#1a1205;font-weight:700;padding:11px 20px;border-radius:8px;font-size:14.5px}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:40px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .card h3{margin:0 0 8px;color:var(--brand2);font-size:17px}
+  .card p{margin:0;color:var(--muted);font-size:14px}
+  section.block{padding:30px 0;border-top:1px solid var(--line)}
+  section.block h2{font-size:22px;color:var(--brand2);margin:0 0 14px}
+  code{background:#f1f3f5;padding:2px 6px;border-radius:4px;font-size:13px}
+  pre{background:#1f2933;color:#e4e7eb;padding:14px;border-radius:8px;overflow:auto;font-size:13px}
+  .links a{display:inline-block;margin:4px 10px 4px 0;font-weight:600}
+  footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center}
+  @media(max-width:760px){.cols{grid-template-columns:1fr}.hero h1{font-size:27px}}
+</style>
+</head>
+<body>
+<header class="nav wrap">
+  <div class="logo">Pangol<span>info</span> <small style="color:var(--muted);font-weight:600">Niche Finder</small></div>
+  <nav>
+    <a href="https://github.com/pangolinfoapi/amazon-niche-finder">GitHub</a>
+    <a href="https://pangolinfoapi.github.io">Hub</a>
+    <a href="https://www.pangolinfo.com" target="_blank" rel="noopener">Pangolinfo</a>
+  </nav>
+</header>
+
+<section class="hero wrap">
+  <h1>Find your blue-ocean Amazon niche</h1>
+  <p>High demand, low competition — that's the dream. This free tool scores Amazon niches from Pangolinfo's <code>filter_niches</code> data so you can spot opportunities before everyone else.</p>
+  <a class="cta" href="https://github.com/pangolinfoapi/amazon-niche-finder" target="_blank" rel="noopener">Fork it on GitHub</a>
+</section>
+
+<section class="block wrap">
+  <h2>✨ What it does</h2>
+  <div class="cols">
+    <div class="card"><h3>🔍 Niche discovery</h3><p>Queries Pangolinfo for niches in your marketplace, filtered by search volume, price band, and brand saturation.</p></div>
+    <div class="card"><h3>🌊 Blue-ocean score</h3><p>Each niche gets a score of <code>search_volume ÷ (brand_count + 1)</code> — high demand divided by competition.</p></div>
+    <div class="card"><h3>🚩 Opportunity flags</h3><p>Niches meeting your min-volume / max-brands / price window are flagged automatically in the report.</p></div>
+    <div class="card"><h3>🗓️ Daily scans</h3><p>A GitHub Actions workflow re-runs every day and commits fresh results, so the data never goes stale.</p></div>
+  </div>
+</section>
+
+<section class="block wrap">
+  <h2>🚀 Quick start</h2>
+  <pre># 1. Fork &amp; clone
+git clone https://github.com/pangolinfoapi/amazon-niche-finder
+cd amazon-niche-finder
+
+# 2. Configure your queries
+cp niches.example.json niches.json
+#   edit niches.json
+
+# 3. Run locally
+export PANGOLIN_TOKEN=eyJ...your_jwt
+python3 niche_finder.py run
+python3 niche_finder.py report</pre>
+  <p>Add the <code>PANGOLIN_TOKEN</code> repository secret and the daily workflow handles the rest.</p>
+</section>
+
+<section class="block wrap">
+  <h2>🌐 Part of the Pangolinfo tool family</h2>
+  <p class="links">
+    <a href="https://github.com/pangolinfoapi/amazon-keyword-rank-tracker">→ Keyword Rank Tracker</a>
+    <a href="https://github.com/pangolinfoapi/google-trends-tracker">→ Google Trends Tracker</a>
+    <a href="https://github.com/pangolinfoapi/amazon-review-analyzer">→ Review Analyzer</a>
+    <a href="https://github.com/Pangolin-spg/amazon-walmart-shopify-scrape-api" target="_blank" rel="noopener">→ Official Scrape API ★56</a>
+    <a href="https://github.com/Pangolin-spg/pangolinfo-amazon-scraper" target="_blank" rel="noopener">→ Amazon Scraper SDK</a>
+    <a href="https://www.pangolinfo.com" target="_blank" rel="noopener">→ pangolinfo.com</a>
+  </p>
+</section>
+
+<footer class="wrap">
+  <p>Free &amp; open-source · MIT Licensed · Built with the <a href="https://mcp.pangolinfo.com/mcp" target="_blank" rel="noopener">Pangolinfo MCP</a> · <a href="https://github.com/pangolinfoapi" target="_blank" rel="noopener">pangolinfoapi</a> on GitHub</p>
+</footer>
+</body>
+</html>
