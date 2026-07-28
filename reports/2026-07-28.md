@@ -1,0 +1,14 @@
+# Amazon Niche Opportunities — 2026-07-28
+
+Discovered with [amazon-niche-finder](https://github.com/pangolinfoapi/amazon-niche-finder) using the [Pangolinfo Niche Data API](https://www.pangolinfo.com/amazon-niche-data-api/).
+
+> Blue-ocean score = search volume (T90) ÷ (brand count + 1). Higher = more demand per unit of competition.
+
+## Top opportunities
+
+| Query | Niche | Search vol (90d) | Price range | Brands | Score |
+|---|---|---|---|---|---|
+| wireless-high-demand | fresh clean threads men | 125506 | 19.13-96.16 | 2 | 41835.33 |
+| wireless-high-demand | 20x24 picture frame | 95140 | 21.52-72.78 | 28 | 3280.69 |
+| home-low-competition | 20x24 picture frame | 95140 | 21.52-72.78 | 28 | 3280.69 |
+| wireless-high-demand | yuji itadori cosplay | 39315 | 19.85-55.72 | 17 | 2184.17 |
