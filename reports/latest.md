@@ -1,4 +1,4 @@
-# Amazon Niche Opportunities — 2026-10-26
+# Amazon Niche Opportunities — 2026-10-27
 
 Discovered with [amazon-niche-finder](https://github.com/pangolinfoapi/amazon-niche-finder) using the [Pangolinfo Niche Data API](https://www.pangolinfo.com/amazon-niche-data-api/).
 
